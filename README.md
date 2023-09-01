@@ -58,6 +58,7 @@
   - the controller of elevator buttons;
   - the controller of floor buttons.
 
+
 2. Here the list of characteristics is:
  - the speed of the elevator (if the building is high, it might be required to have a fast elevator);
  - the pace of increasing / descreasing the speed (if the pace is to high, some people might endure something like a flight decease);
@@ -68,12 +69,14 @@
  - there should be a chance for a repairement operator to open the doors manually and let the passengers leave if the elevator suddenly stops operating while moving with pasengers;
  - there should be allowed to pick up other users while the elevator is moving to utilize the elevator to the full extent.
 
+
 3. Here the list of parameter is:
  - the time to wait for an elevator;
  - the time required to get to the required floor;
  - the convenience of movement inside the elevator;
  - the chance for sightseeing through transparent elevator walls in case the time spent in the elevator is too long;
  - the reliability of defence system in case the elevator suddenly stops operating.
+
 
 4. Here the floor button controller logic is:
   - if user presses a floor button, it starts lightning and the request is placed in the elevator queue;
