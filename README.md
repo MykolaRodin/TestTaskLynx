@@ -97,4 +97,4 @@
   - if the elevator leaves STAND_BETWEEN_MOVEMENTS state and continues moving, it passes back to MOVEMENT_WITH_PASSENGERS state;
   - when all the passengers have left the elevator, it moved to the STAND state.
 
-P.S. No ChatGPT was used for the approach.
+## P.S. No ChatGPT was used for the approach.
