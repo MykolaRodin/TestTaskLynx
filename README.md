@@ -1,4 +1,4 @@
-# Test task description
+## Test task description
 
 Дано:
 1. є житлова будівля висотою F поверхів
@@ -20,8 +20,8 @@
 
 Використання ChatGPT або інших LLMs не забороняється (і навіть вітається у тому разі, якщо Ви своїми словами можете обгрунтувати їхнє використання), але у разі їхнього використання ми хотіли б бачити логи відповідних чатів.
 
-# Approach details
-1. The abstraction of the model might look like this:
+## Approach details
+# 1. The abstraction of the model might look like this:
  1.1. The elevator can be described as struct that contains:
 
   1.1.1. The vector of booleans of size F that corresponds to elevator buttons (If the elevator stands on some floor, corresponding index is set to true. If elevator is moving, there might be several trues in the vector if several people have entered the elevator and are moving to different floors);
@@ -58,8 +58,7 @@
   - the controller of elevator buttons;
   - the controller of floor buttons.
 
-
-2. Here the list of characteristics is:
+# 2. Here the list of characteristics is:
  - the speed of the elevator (if the building is high, it might be required to have a fast elevator);
  - the pace of increasing / descreasing the speed (if the pace is to high, some people might endure something like a flight decease);
  - every button (for both elevator buttons and floor buttons) should have a LED inside. The LED should start lightning after user presses the button to indicate the user's request has been received;
@@ -70,7 +69,7 @@
  - there should be allowed to pick up other users while the elevator is moving to utilize the elevator to the full extent.
 
 
-3. Here the list of parameter is:
+# 3. Here the list of parameter is:
  - the time to wait for an elevator;
  - the time required to get to the required floor;
  - the convenience of movement inside the elevator;
@@ -78,7 +77,7 @@
  - the reliability of defence system in case the elevator suddenly stops operating.
 
 
-4. Here the floor button controller logic is:
+# 4. Here the floor button controller logic is:
   - if user presses a floor button, it starts lightning and the request is placed in the elevator queue;
   - when the elevator starts moving, the lightning in the button in the floor stops;
   - while the elevators are moving or stand, the indicator on the floor shows the actual floors the elevators are at reading the notificagtions from the floor queue;
