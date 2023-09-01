@@ -76,7 +76,8 @@
  - the reliability of defence system in case the elevator suddenly stops operating.
 
 
-## 4. Here the floor button controller logic is:
+## 4. The logic of controllers
+ Here the floor button controller logic is:
   - if user presses a floor button, it starts lightning and the request is placed in the elevator queue;
   - when the elevator starts moving, the lightning in the button in the floor stops;
   - while the elevators are moving or stand, the indicator on the floor shows the actual floors the elevators are at reading the notificagtions from the floor queue;
