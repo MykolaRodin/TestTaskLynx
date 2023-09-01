@@ -23,8 +23,11 @@
 # Approach details
 1. The abstraction of the model might look like this:
  1.1. The elevator can be described as struct that contains:
+
   1.1.1. The vector of booleans of size F that corresponds to elevator buttons (If the elevator stands on some floor, corresponding index is set to true. If elevator is moving, there might be several trues in the vector if several people have entered the elevator and are moving to different floors);
+
   1.1.2. The vector of special elevator buttons of size 1 that contains just STOP button (It might be tempting to optimize it and use just one vector where STOP button is plcaed at zero index. Yet this premature optimization might fail if there is an underground floor or further modifications might require to use extra speial buttons (for example, a button that calls a reparement operator from inside the elevator if it suddenly stops functioning)).
+
   1.1.3. The state machine that corresponds to one of possible elevator states:
     - STAND (When the elevator stands at some floor);
     - OVERLOAD (When the elevator stands at some floor yet the weight of the passengers is higher then allowed);
@@ -32,11 +35,13 @@
     - MOVEMENT_WITH_PASSENGERS (When the elevator is moving between the floors with users);
     - STAND_BETWEEN_MOVEMENTS (If several people have entered the elevator and are moving to different floors, the elevator might stop at some floor and then continue the movement. If the elevator has just arrived to the user, it uses this state as well);
     - OUT_OF_ORDER (If the elevator is out of order).
+
   1.1.4. The indicator to indicate which floor the elevator is currently at.
+
   1.1.5. The indicator that indicates the elevator is overloaded.
 
  1.2. The floor equipment can be described as a struct that contains:
-  - floor button;
+  - floor button.
 
  1.3. The controller of elevator buttons can be described as struct that contains (please see p.4 for extra details):
   - the queue to receive requests from the controller of floor buttons;
@@ -51,7 +56,7 @@
 
  1.5. The building can be described as struct that contains:
   - the controller of elevator buttons;
-  - the controller of floor buttons;
+  - the controller of floor buttons.
 
 2. Here the list of characteristics is:
  - the speed of the elevator (if the building is high, it might be required to have a fast elevator);
